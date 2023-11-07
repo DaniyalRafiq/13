@@ -1,0 +1,237 @@
+@media (max-width: 1237px) {}
+
+@media (max-width: 1172px) {
+
+    .hero_content,
+    .hero_card_first {
+        display: none;
+    }
+
+    .hero_cards_main {
+        margin: 0;
+        display: block;
+    }
+
+    .hero_content_main {
+        margin-bottom: 20px;
+    }
+
+    .swiper-slide:has(.hero_card) {
+        width: 310px;
+    }
+
+    .hero_card_slide {
+        padding: 20px;
+        background: white;
+    }
+
+    .hero_content_main h4 {
+        text-align: start;
+    }
+}
+
+@media (max-width: 1164px) {
+    .footer_bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+        align-items: flex-start;
+        background: center;
+        box-shadow: none;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search_btn.search_btn_main {
+        display: block;
+        margin: 0;
+    }
+
+    .header_from_result_main {
+        position: absolute;
+        top: 100%;
+        max-width: 430px;
+        width: 100%;
+        padding: 8px;
+        background: var(--primary-500);
+        border-radius: 0 0 5px 5px;
+        display: none;
+        border-top: 1px dashed white;
+        z-index: 3;
+    }
+
+    .header_form_main,
+    .nav_main {
+        flex: 0 0 43px;
+    }
+
+    .menu_btn {
+        display: flex;
+    }
+
+    .nav_wrapper_main {
+        display: none;
+        position: absolute;
+        top: 100%;
+        padding: 15px;
+        background: var(--primary-500);
+        border-top: 1px dashed white;
+        border-radius: 0 0 5px 5px;
+        z-index: 4;
+    }
+
+    .nav_wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .homebar {
+        display: none;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
+        align-items: flex-start;
+        position: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 792px) {}
+
+@media (max-width: 768px) {
+    .nav_main {
+        order: 2;
+    }
+
+    .logo_main {
+        justify-content: flex-start;
+    }
+
+    .menu_btn_res {
+        display: flex !important;
+    }
+
+    .header_wrapper {
+        gap: 10px;
+    }
+
+    .header_from_result_main,
+    .nav_wrapper_main {
+        right: 20px;
+    }
+
+    .nav_wrapper_main {
+        max-width: 430px;
+        overflow: auto;
+        width: 100%;
+    }
+
+    .blog_home_wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 616px) {}
+
+@media (max-width: 535px) {
+    .logo {
+        width: 145px;
+    }
+
+    .nav_wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header_from_result_main,
+    .nav_wrapper_main {
+        max-width: 100%;
+        left: 0;
+        top: calc(100% + 10px);
+
+    }
+
+
+    .header_from_result_main .form>button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .header_from_result_main .form {
+        height: 38px;
+    }
+
+    .header_wrapper {
+        position: relative;
+    }
+
+    .blog_top_card_main {
+        flex-direction: column;
+    }
+
+    .blog_top_card {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 597px) {}
+
+@media (max-width: 571px) {}
+
+@media (max-width: 509px) {
+    .latest_news_card:nth-child(1) {
+        grid-column: span 1;
+    }
+
+
+    .latest_news_main_cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
+    }
+
+    .latest_mews_wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    }
+}
+
+@media (max-width: 470px) {}
+
+@media (max-width: 466px) {
+    .nav_wrapper {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer_bottom ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer_bottom ul li a:where(:hover, .active) {
+        transform: translateX(5px);
+        color: var(--white);
+    }
+
+    .footer_bottom {
+        align-items: flex-start;
+    }
+
+    .footer_bottom p {
+        padding-top: 10px;
+        border-top: 1px solid #fdfdfd14;
+    }
+}
