@@ -159,7 +159,12 @@
 
 @media (max-width: 640px) {}
 
-@media (max-width: 616px) {}
+@media (max-width: 616px) {
+    .next_prev_post_main{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 
 @media (max-width: 535px) {
     .logo {
@@ -267,5 +272,8 @@
 
     .main_start {
         flex-direction: column;
+    }
+    .single_blog_img_views{
+        display: none;
     }
 }
