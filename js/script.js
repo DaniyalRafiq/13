@@ -75,31 +75,6 @@ $(document).ready(function () {
     },
   });
 
-  $(".hero_card_first").on("mousemove", function(event) {
-    var card = $(this);
-    var cardContent = card.find(".hero_card_content");
-  
-    // Calculate the rotation angles based on the mouse position
-    var rotateX = (event.clientY - card.offset().top - card.height() / 2) / 20;
-    var rotateY = (event.clientX - card.offset().left - card.width() / 2) / 20;
-  
-    // Apply the 3D rotation effect
-    card.css({
-      transform: "rotateX(" + -rotateX + "deg) rotateY(" + rotateY + "deg)",
-    });
-  
-    cardContent.css({
-      transform: "rotateX(" + rotateX + "deg) rotateY(" + -rotateY + "deg)",
-    });
-  });
-  
-  $(".hero_card_first").on("mouseleave", function() {
-    // Reset the card's rotation when the mouse leaves
-    $(this).css("transform", "rotateX(0deg) rotateY(0deg)");
-    $(this)
-      .find(".hero_card_content")
-      .css("transform", "rotateX(0deg) rotateY(0deg)");
-  });
   var swiper = new Swiper(".hero_card_slide", {
     slidesPerView: 'auto',
     spaceBetween: 10,
@@ -114,5 +89,24 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next.hero_slide_btn",
       prevEl: ".swiper-button-prev.hero_slide_btn",
     },
+  });
+
+
+  var $searchInput = $("#searchInput");
+  var $headerFormResult = $(".header_form_result");
+
+  // Slide up the result when the page loads
+  $headerFormResult.slideUp();
+
+  // Attach an input event listener
+  $searchInput.on("input", function () {
+      // Check if the input value is empty
+      if ($(this).val().trim() === "") {
+          // If empty, slide up the result
+          $headerFormResult.slideUp();
+      } else {
+          // If not empty, slide down the result
+          $headerFormResult.slideDown();
+      }
   });
 });
