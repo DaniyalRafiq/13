@@ -2,9 +2,12 @@
 
 @media (max-width: 1172px) {
 
-    .hero_content,
-    .hero_card_first {
-        display: none;
+    .hero_content_main {
+    display: block;
+    }
+
+    .hero_titile {
+        flex: 0 0 auto;
     }
 
     .hero_cards_main {
@@ -14,19 +17,35 @@
 
     .hero_content_main {
         margin-bottom: 20px;
+        overflow: hidden;
     }
 
-    .swiper-slide:has(.hero_card) {
+    /* .swiper-slide:has(.hero_card) {
         width: 310px;
-    }
+    } */
 
     .hero_card_slide {
         padding: 20px;
         background: white;
+        margin-top: 20px;
+        max-width: 100%;
     }
+
+
 
     .hero_content_main h4 {
         text-align: start;
+    }
+    .hero_card_slide  .swiper-slide-prev , .hero_card_slide  .swiper-slide-next {
+        opacity: 0.6;
+        transition: .3s;
+    }
+    .hero_card_slide  .swiper-slide-prev{
+        /* transform: perspective(1200px) rotateY(0deg); */
+    }
+    
+    .hero_card_slide  .swiper-slide{
+        transition: .5s;
     }
 }
 
@@ -109,6 +128,7 @@
         position: unset;
         width: 100%;
     }
+
 }
 
 @media (max-width: 792px) {}
@@ -157,10 +177,18 @@
     }
 }
 
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+    .hero_content  , .hero_content_btn_main{
+        display: none;
+    }
+    .swiper-slide:has(.hero_card){
+        max-width: 290px;
+    }
+
+}
 
 @media (max-width: 616px) {
-    .next_prev_post_main{
+    .next_prev_post_main {
         flex-direction: column;
         gap: 15px;
     }
@@ -226,13 +254,18 @@
     .latest_news_card:nth-child(1) {
         grid-column: span 1;
     }
-
-
-    .latest_news_main_cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
+    .latest_news_wrapper_child{
+        grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
     }
-
+    .latest_news_child_card figure{
+        height: 100px;
+    }
+    .latest_news_child_card .latest_news_card_content{
+        flex: 0 0 auto;
+    }
+    .latest_news_child_card {
+        height: unset;
+    }
     .latest_mews_wrapper {
         grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
     }
@@ -240,6 +273,9 @@
 
 @media (max-width: 470px) {
     .modal-header {
+        flex-direction: column;
+    }
+    .lates_news_child_cards{
         flex-direction: column;
     }
 }
@@ -273,7 +309,8 @@
     .main_start {
         flex-direction: column;
     }
-    .single_blog_img_views{
+
+    .single_blog_img_views {
         display: none;
     }
 }

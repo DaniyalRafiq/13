@@ -55,42 +55,19 @@ $(document).ready(function () {
     $(".search_btn_main i").removeClass("ti-x").addClass("ti-search");
   });
 
-  var swiper_thumb = new Swiper(".hero_slide_thumb", {
-    slidesPerView: 2,
-    centeredSlides: true,
+  var swiper = new Swiper(".hero_card_slide", {
     loop: true,
     speed: 800,
-  });
-
-  var swiper = new Swiper(".hero_bg_swiper", {
-    spaceBetween: 0,
-    effect: "fade",
-    thumbs: {
-      swiper: swiper_thumb,
-    },
-    speed: 800,
-    navigation: {
-      nextEl: ".swiper-button-next.hero_slide_btn",
-      prevEl: ".swiper-button-prev.hero_slide_btn",
-    },
-  });
-
-  var swiper = new Swiper(".hero_card_slide", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 20,
     centeredSlides: true,
-    loop: true ,
-    speed: 800,
-    autoplay: {
-      delay: 2050, // Autoplay delay in milliseconds (3 seconds in this example)
-      disableOnInteraction: false, // Allow autoplay to continue after user interactions
-    },
-    navigation: {
-      nextEl: ".swiper-button-next.hero_slide_btn",
-      prevEl: ".swiper-button-prev.hero_slide_btn",
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
     },
   });
-
 
   var $searchInput = $("#searchInput");
   var $headerFormResult = $(".header_form_result");
@@ -100,13 +77,13 @@ $(document).ready(function () {
 
   // Attach an input event listener
   $searchInput.on("input", function () {
-      // Check if the input value is empty
-      if ($(this).val().trim() === "") {
-          // If empty, slide up the result
-          $headerFormResult.slideUp();
-      } else {
-          // If not empty, slide down the result
-          $headerFormResult.slideDown();
-      }
+    // Check if the input value is empty
+    if ($(this).val().trim() === "") {
+      // If empty, slide up the result
+      $headerFormResult.slideUp();
+    } else {
+      // If not empty, slide down the result
+      $headerFormResult.slideDown();
+    }
   });
 });
