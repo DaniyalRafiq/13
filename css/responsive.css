@@ -1,9 +1,28 @@
+@media (max-width: 1284px) {
+    .latest_blog_slide .swiper-slide {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    .latest_blog_main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+        align-items: flex-start;
+        flex: 0;
+    }
+
+    .latest_blog_slide .swiper-slide-active .latest_main_card .latest_main_card_content {
+        scale: 1;
+        transform: translate(0px, 0px);
+        }
+}
+
 @media (max-width: 1237px) {}
 
 @media (max-width: 1172px) {
 
     .hero_content_main {
-    display: block;
+        display: block;
     }
 
     .hero_titile {
@@ -36,15 +55,18 @@
     .hero_content_main h4 {
         text-align: start;
     }
-    .hero_card_slide  .swiper-slide-prev , .hero_card_slide  .swiper-slide-next {
+
+    .hero_card_slide .swiper-slide-prev,
+    .hero_card_slide .swiper-slide-next {
         opacity: 0.6;
         transition: .3s;
     }
-    .hero_card_slide  .swiper-slide-prev{
+
+    .hero_card_slide .swiper-slide-prev {
         /* transform: perspective(1200px) rotateY(0deg); */
     }
-    
-    .hero_card_slide  .swiper-slide{
+
+    .hero_card_slide .swiper-slide {
         transition: .5s;
     }
 }
@@ -60,6 +82,9 @@
         align-items: center;
     }
 
+    .latest_blog_wrapper {
+        flex-direction: column-reverse;
+    }
 
 }
 
@@ -178,10 +203,13 @@
 }
 
 @media (max-width: 640px) {
-    .hero_content  , .hero_content_btn_main{
+
+    .hero_content,
+    .hero_content_btn_main {
         display: none;
     }
-    .swiper-slide:has(.hero_card){
+
+    .swiper-slide:has(.hero_card) {
         max-width: 290px;
     }
 
@@ -254,18 +282,23 @@
     .latest_news_card:nth-child(1) {
         grid-column: span 1;
     }
-    .latest_news_wrapper_child{
+
+    .latest_news_wrapper_child {
         grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
     }
-    .latest_news_child_card figure{
+
+    .latest_news_child_card figure {
         height: 100px;
     }
-    .latest_news_child_card .latest_news_card_content{
+
+    .latest_news_child_card .latest_news_card_content {
         flex: 0 0 auto;
     }
+
     .latest_news_child_card {
         height: unset;
     }
+
     .latest_mews_wrapper {
         grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
     }
@@ -275,7 +308,8 @@
     .modal-header {
         flex-direction: column;
     }
-    .lates_news_child_cards{
+
+    .lates_news_child_cards {
         flex-direction: column;
     }
 }

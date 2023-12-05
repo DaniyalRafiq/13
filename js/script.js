@@ -68,13 +68,13 @@ $(document).ready(function () {
       },
     },
   });
-
+  
   var $searchInput = $("#searchInput");
   var $headerFormResult = $(".header_form_result");
-
+  
   // Slide up the result when the page loads
   $headerFormResult.slideUp();
-
+  
   // Attach an input event listener
   $searchInput.on("input", function () {
     // Check if the input value is empty
@@ -85,5 +85,22 @@ $(document).ready(function () {
       // If not empty, slide down the result
       $headerFormResult.slideDown();
     }
+  });
+  var swiper = new Swiper(".latest_blog_slide", {
+    speed: 800,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop : true ,
+    autoplay: {
+      delay: 5000, // Set the autoplay delay in milliseconds (e.g., 5000 for 5 seconds)
+      disableOnInteraction: false, // Set to false if you want the autoplay to continue even when the user interacts with the slider
+  },
+    breakpoints: {
+
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+  },
+  }
   });
 });
